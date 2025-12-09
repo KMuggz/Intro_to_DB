@@ -10,6 +10,7 @@ DATABASE_NAME = "alx_book_store"
 def create_database():
     """Connects to MySQL and creates the specified database if it doesn't exist."""
     db = None
+    cursor = None
     try:
         # 1. Establish connection to the MySQL server (without specifying a database)
         db = mysql.connector.connect(
