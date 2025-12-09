@@ -5,7 +5,6 @@ from mysql.connector import errorcode
 DB_HOST = "localhost"  # my hostname
 DB_USER = "root"  # my MySQL username
 DB_PASSWORD = "SQLsucksdick69!"  # my MySQL password
-DATABASE_NAME = "alx_book_store"
 
 def create_database():
     """Connects to MySQL and creates the specified database if it doesn't exist."""
@@ -23,13 +22,13 @@ def create_database():
 
         # 2. SQL statement to create the database (IF NOT EXISTS prevents failure)
         # Note: The backticks (`) are used around the database name as a best practice to handle names that might conflict with reserved keywords.
-        sql_statement = f"CREATE DATABASE IF NOT EXISTS `{DATABASE_NAME}`"
+        sql_statement = f"CREATE DATABASE IF NOT EXISTS alx_book_store" 
 
         # 3. Execute the statement
         cursor.execute(sql_statement)
 
         # 4. Print success message
-        print(f"Database '{DATABASE_NAME}' created successfully!")
+        print(f"Database 'alx_book_store' created successfully!")
 
     except mysql.connector.Error as err:
         # 5. Handle potential connection and execution errors
