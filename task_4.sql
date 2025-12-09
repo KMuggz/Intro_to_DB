@@ -11,4 +11,4 @@ FROM
     INFORMATION_SCHEMA.COLUMNS
 WHERE
     TABLE_SCHEMA = DATABASE() -- Use the current database (passed as argument)
-    AND TABLE_NAME = 'Books';
+    AND TABLE_NAME = 'books';
